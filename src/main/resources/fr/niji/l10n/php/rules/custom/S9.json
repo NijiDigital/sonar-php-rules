@@ -1,0 +1,14 @@
+{
+  "title": "Superglobal variables that contains user input should not be used directly.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "owasp-a8",
+    "cwe"
+  ],
+  "defaultSeverity": "Major"
+}

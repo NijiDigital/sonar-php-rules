@@ -1,0 +1,14 @@
+{
+  "title": "unserialize function should not be used on untrusted data.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "20min"
+  },
+  "tags": [
+    "owasp-a8",
+    "cwe"
+  ],
+  "defaultSeverity": "Major"
+}

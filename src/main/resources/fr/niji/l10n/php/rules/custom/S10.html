@@ -1,0 +1,10 @@
+<p>The <code>filter_input()</code> function should not be used with FILTER_DEFAULT nor FILTER_UNSAFE_RAW filter option.</p>
+<h2>Noncompliant Code Example (Drupal 8)</h2>
+<pre>
+    $search = filter_input(INPUT_GET, 'search', FILTER_UNSAFE_RAW);
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/502.html">MITRE CWE-20</a> - Improper Input Validation</li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection</li>
+</ul>

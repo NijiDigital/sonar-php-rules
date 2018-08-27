@@ -1,0 +1,14 @@
+{
+  "title": "Namespace importing should be preferred over include/require functions.",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "owasp-a5",
+    "cwe"
+  ],
+  "defaultSeverity": "Minor"
+}

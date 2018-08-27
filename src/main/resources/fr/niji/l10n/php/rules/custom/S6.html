@@ -1,0 +1,11 @@
+<p>A dynamic database query should always have a constant string for its conditional or snippet arguments. Dynamically
+    computed query snippets or condition strings may lead to SQL injection attacks</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+$query->condition('w.severity', '5', $operator);
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/89.html">MITRE CWE-89</a> - Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')</li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection</li>
+</ul>

@@ -1,0 +1,10 @@
+<p>Use of the <code>unserialize</code> function may lead to PHP Object Injection attacks</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+$object = unserialize($untrusted_data);
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/502.html">MITRE CWE-502</a> - Deserialization of Untrusted Data</li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A8-Insecure_Deserialization">OWASP Top 10 2017 Category A8</a> - Insecure Deserialization</li>
+</ul>

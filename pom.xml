@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fr.niji</groupId>
+    <artifactId>sonar-niji-php-rules</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>sonar-plugin</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.analyzer-commons>1.5.0.178</version.analyzer-commons>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.sonarsource.sonarqube</groupId>
+            <artifactId>sonar-plugin-api</artifactId>
+            <version>7.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sonarsource.php</groupId>
+            <artifactId>sonar-php-plugin</artifactId>
+            <type>sonar-plugin</type>
+            <version>2.13.0.3107</version>
+        <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sonarsource.analyzer-commons</groupId>
+            <artifactId>sonar-analyzer-commons</artifactId>
+            <version>${version.analyzer-commons}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+                <artifactId>sonar-packaging-maven-plugin</artifactId>
+                <version>1.17</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <basePlugin>php</basePlugin>
+                    <pluginKey>niji-php-rules</pluginKey>
+                    <pluginClass>fr.niji.sonarphp.PHPRulesPlugin</pluginClass>
+                    <pluginDescription>Custom rules for SonarQube PHP analysis</pluginDescription>
+                    <pluginOrganizationName>Niji</pluginOrganizationName>
+                    <pluginOrganizationUrl>http://www.niji.fr</pluginOrganizationUrl>
+                    <pluginSourcesUrl>https://github.com/nijidigital/sonar-php-rules</pluginSourcesUrl>
+                    <sonarQubeMinVersion>7.1</sonarQubeMinVersion>
+                    <sonarLintSupported>true</sonarLintSupported>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

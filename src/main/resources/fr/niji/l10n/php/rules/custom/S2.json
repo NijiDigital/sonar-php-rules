@@ -1,0 +1,14 @@
+{
+  "title": "TLS trust chain verification should not be disabled.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "45min"
+  },
+  "tags": [
+    "owasp-a6",
+    "cwe"
+  ],
+  "defaultSeverity": "Major"
+}

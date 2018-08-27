@@ -1,0 +1,11 @@
+<p>Superglobal variables that contains user input should not be used directly. Prefer using the <code>filter_input()</code> function.
+<h2>Noncompliant Code Example (Drupal 8)</h2>
+<pre>
+    $value = $_POST['param1'];
+    $query_string = "/var/www/html/images/".$_POST['image_name']."png";
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/502.html">MITRE CWE-20</a> - Improper Input Validation</li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection</li>
+</ul>

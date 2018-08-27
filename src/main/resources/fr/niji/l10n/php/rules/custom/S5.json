@@ -1,0 +1,16 @@
+{
+  "title": "Drupal static query should use proper argument substitution.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "owasp-a1",
+    "cwe",
+    "drupal7",
+    "drupal8"
+  ],
+  "defaultSeverity": "Critical"
+}

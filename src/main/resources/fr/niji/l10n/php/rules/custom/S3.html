@@ -1,0 +1,13 @@
+<p>Versions of SSL/TLS protocol and cypher suites must be chosen carefully and should not be modified at runtime</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+// SSLv3 is a deprecated version of SSL/TLS protocol
+curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_SSLv3);
+// Cypher suites should be chosen carefully
+curl_setopt($curl, CURLOPT_SSL_CIPHER_LIST, "AES128-SHA:RC2-CBC-MD5:KRB5-RC4-MD5:KRB5-RC4-SHA:RC4-SHA:RC4-MD5")
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/327.html">MITRE CWE-327</a> - Use of a Broken or Risky Cryptographic Algorithm </li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A6-Security_Misconfiguration">OWASP Top 10 2017 Category A6</a> - Security Misconfiguration</li>
+</ul>

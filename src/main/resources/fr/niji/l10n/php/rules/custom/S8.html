@@ -1,0 +1,15 @@
+<p>In the Form API, using data from <code>$form_state['input']</code> (Drupal 7) or <code>$form_state->getUserInput()</code>(Drupal 8) are a security risk. </p>
+<p>Use data from <code>$form_state['values']</code> (Drupal 7) or <code>$form_state->values</code> (Drupal 8) instead.</p>
+<h2>Noncompliant Code Example (Drupal 8)</h2>
+<pre>
+class MyForm extends FormBase {
+    public function validateForm(array &$form, FormStateInterface $form_state) {
+
+        $email = $form_state->getUserInput('email');
+    }}
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/502.html">MITRE CWE-20</a> - Improper Input Validation</li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection</li>
+</ul>

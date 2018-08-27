@@ -1,0 +1,14 @@
+{
+  "title": "filter_input() should not be used with FILTER_DEFAULT nor FILTER_UNSAFE_RAW filter option.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "20min"
+  },
+  "tags": [
+    "owasp-a8",
+    "cwe"
+  ],
+  "defaultSeverity": "Major"
+}

@@ -1,0 +1,12 @@
+<p>If not property used, functions like <code>system</code>, <code>shell_exec</code> or <code>``</code> may lead to arbitrary system commands execution. </p>
+<p>There are some exceptions where those functions are allowed. They may be used in Drush commands, which are use for administrative tasks</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+shell_exec("rm -rf /tmp/*");
+</pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/78.html">MITRE CWE-78</a> - Improper Neutralization of
+        Special Elements used in an OS Command ('OS Command Injection') </li>
+    <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection</li>
+</ul>

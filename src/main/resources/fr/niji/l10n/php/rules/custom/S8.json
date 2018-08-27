@@ -1,0 +1,16 @@
+{
+  "title": "Drupal Form API unsanitized user input should not be used.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "20min"
+  },
+  "tags": [
+    "owasp-a8",
+    "cwe",
+    "drupal7",
+    "drupal8"
+  ],
+  "defaultSeverity": "Major"
+}

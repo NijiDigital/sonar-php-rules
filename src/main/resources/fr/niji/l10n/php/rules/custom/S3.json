@@ -1,0 +1,14 @@
+{
+  "title": "TLS configuration should not be changed dynamically.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "owasp-a6",
+    "cwe"
+  ],
+  "defaultSeverity": "Major"
+}
