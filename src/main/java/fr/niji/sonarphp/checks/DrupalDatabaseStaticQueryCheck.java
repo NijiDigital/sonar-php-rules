@@ -29,7 +29,8 @@ public class DrupalDatabaseStaticQueryCheck extends PHPVisitorCheck {
         }
 
         // D8
-        if (callee.is(Kind.OBJECT_MEMBER_ACCESS) && ((MemberAccessTree) callee).member().toString().equals(D8_QUERY)) {
+        if (callee.is(Kind.OBJECT_MEMBER_ACCESS) && ((MemberAccessTree) callee).member().toString().equals(D8_QUERY)
+                && tree.arguments().size() > 0) {
 
             ExpressionTree firstArgument = tree.arguments().get(0);
             this.checkDbQueryFirstArgument(firstArgument);

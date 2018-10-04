@@ -11,3 +11,5 @@ $query = $connection->query($sql_str);                                          
 $query = db_query("SELECT nid, title FROM {node} WHERE user = $name");                  // NOK
 $query = db_query("SELECT nid, title FROM {node} WHERE user = ".$name);                 // NOK
 $query = db_query($sql_str);                                                            // NOK
+
+$query = $this->index->query(); // OK
