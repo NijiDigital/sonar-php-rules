@@ -3,5 +3,16 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
-after_success:
-  - mvn clean test
+
+before_deploy:
+  - mvn versions:set -DnewVersion=$TRAVIS_TAG
+  - mvn package
+deploy:
+  provider: releases
+  api_key:
+    secure: VBDQatt3Eti3q1rP7aszD5kxsVC4rv1bpsMIXsFl0oGYqGJnI8z1HbpwCj3u4Rz4LG6I+g3OhXlF8qoZJ1eQVjgCXzOGzz6AQGz0XGJfqhYATpD9clMSWM5tn+Ir9b61pjmzA4hMudl5/xErE5avAr4xGOyimHiepweCFfsyoG8fI3RvpvHb3ITEHRsy5Ul4ss1/fpkyKlEfiwjr37kJywG32ehky0rxGXT4eR0jYO4qPPTBOo6pH1AGTFvt3zEDKnrxNDc1FNPEzPQxmhhkha/ynLALBIOn/cp9LWT2hUEs71KWggQaQvQyBDDOCxzPTEyLyDLEdFGXnB8/gVhUcCFV4gngwLGmum8KqgZd6TGyABT7CFn19IEkNSUD03+70Ydq387FxVb8eJMxdqzpAFFFwFsaD9M94AUMNa1LUIteS33foqZsJg9sdUOYn/93wGrEBCQ8gs3DGTOhLgqnAQ8+d8BvZUhHloODS0O4B848izIC4Z2IVOtlzWqkVmpVPjnXL6070BNKhUpM9lsR8tLP3QLEu6o9agMMjKYGOipHCqVXFn3wxuoRqPXsLMMNnL5pTGaBZMF2aZ8LwcFIhkiuAbxHaKe9Rp601cW4e8HmGmd6h+C5PaTbG06vYVxxfAmr3MXYcvYfIdElk2pg05OmAel6ghxA812hIA9r45I=
+  file: target/sonar-niji-php-rules-$TRAVIS_TAG.jar
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: NijiDigital/sonar-php-rules
