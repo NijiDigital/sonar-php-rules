@@ -13,6 +13,6 @@ public class PHPRuleDefinitionsTest {
     RulesDefinition.Context context = new RulesDefinition.Context();
     rulesDefinition.define(context);
     RulesDefinition.Repository repository = context.repository("niji-php-rules");
-    assertEquals(10, repository.rules().size());
+    assertEquals(8, repository.rules().size());
   }
 }

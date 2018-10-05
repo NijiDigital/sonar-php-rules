@@ -52,13 +52,11 @@ public class PHPRuleDefinitions implements RulesDefinition, PHPCustomRuleReposit
   @Override
   public ImmutableList<Class> checkClasses() {
       return ImmutableList.of(
-              SystemExecFunctionUseCheck.class,
               CURLDisableTLSCheck.class,
               CURLTLSMisconfigurationCheck.class,
               NamespaceImportCheck.class,
               DrupalDatabaseStaticQueryCheck.class,
               DrupalDatabaseDynamicQueryCheck.class,
-              UnserializeFunctionUseCheck.class,
               InputSuperglobalVariableUseCheck.class,
               DrupalFormStateUserInputUsageCheck.class,
               FilterInputUnsafeRawUseCheck.class
