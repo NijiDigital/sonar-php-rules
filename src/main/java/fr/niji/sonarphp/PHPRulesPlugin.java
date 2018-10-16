@@ -21,13 +21,18 @@ package fr.niji.sonarphp;
 
 import org.sonar.api.Plugin;
 
+
 /**
  * Extension point to define a Sonar Plugin.
  */
 public class PHPRulesPlugin implements Plugin {
 
-  @Override
-  public void define(Context context) {
-    context.addExtension(PHPRuleDefinitions.class);
-  }
+    @Override
+    public void define(Context context) {
+
+        context.addExtensions(
+                PHPRuleDefinitions.class,
+                DrupalSecurityProfileDefinition.class
+        );
+    }
 }

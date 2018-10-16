@@ -38,11 +38,12 @@ import org.sonarsource.analyzer.commons.RuleMetadataLoader;
 public class PHPRuleDefinitions implements RulesDefinition, PHPCustomRuleRepository {
 
   private static final String RESOURCE_BASE_PATH = "fr/niji/l10n/php/rules/custom";
+  public static final String REPOSITORY_KEY = "niji-php-rules";
 
   @Override
   public String repositoryKey() {
 
-    return "niji-php-rules";
+    return REPOSITORY_KEY;
   }
 
   /**

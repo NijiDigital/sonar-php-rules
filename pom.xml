@@ -6,41 +6,67 @@
 
     <groupId>fr.niji</groupId>
     <artifactId>sonar-niji-php-rules</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <packaging>sonar-plugin</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.analyzer-commons>1.5.0.178</version.analyzer-commons>
+        <version.assertj>3.5.2</version.assertj>
+        <version.junit>4.12</version.junit>
+        <version.mockito>2.21.0</version.mockito>
+        <version.sonar-php-plugin>2.14.0.3569</version.sonar-php-plugin>
+        <version.sonar-plugin-api>7.3</version.sonar-plugin-api>
+        <version.staxmate>2.0.1</version.staxmate>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-plugin-api</artifactId>
-            <version>7.1</version>
+            <version>${version.sonar-plugin-api}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.sonarsource.php</groupId>
             <artifactId>sonar-php-plugin</artifactId>
-            <type>sonar-plugin</type>
-            <version>2.14.0.3569</version>
-        <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${version.sonar-php-plugin}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.sonarsource.analyzer-commons</groupId>
             <artifactId>sonar-analyzer-commons</artifactId>
             <version>${version.analyzer-commons}</version>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${version.assertj}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${version.mockito}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.staxmate</groupId>
+            <artifactId>staxmate</artifactId>
+            <version>${version.staxmate}</version>
         </dependency>
     </dependencies>
 
